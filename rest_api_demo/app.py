@@ -4,7 +4,6 @@ import os
 from flask import Flask, Blueprint
 from rest_api_demo import settings
 from rest_api_demo.api.roadlink.endpoints.roadlinks import ns as roadlink_namespace
-#from rest_api_demo.api.roadlink.endpoints.categories import ns as blog_categories_namespace
 from rest_api_demo.api.restplus import api
 
 app = Flask(__name__)
@@ -28,7 +27,6 @@ def initialize_app(flask_app):
 	blueprint = Blueprint('api', __name__, url_prefix='/api')
 	api.init_app(blueprint)
 	api.add_namespace(roadlink_namespace)
-	#api.add_namespace(blog_categories_namespace)
 	flask_app.register_blueprint(blueprint)
 
 
