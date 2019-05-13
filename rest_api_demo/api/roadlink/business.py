@@ -11,6 +11,7 @@ def get_traffic_intensities(start_time, end_time):
     h=[]
     [h.append({'id':i[0],'traffic_intensity':i[1]}) for i in roadlinks]
     d={'start_time':start_time,'end_time':end_time,'items':h}
+    session.close()
     return d
 
 '''def create_roadlink(data):

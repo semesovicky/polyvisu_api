@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, MetaData, Column, Integer, String
 from sqlalchemy.orm import mapper, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
  
-engine = create_engine('sqlite:///polyvisu.sqlite', echo=True)
+engine = create_engine('sqlite:////home/dima/apps/polyvisu_api_2/rest_api_demo/database/polyvisu.sqlite', echo=True)
 Base = declarative_base(engine)
 
 class Roadlink(Base):
